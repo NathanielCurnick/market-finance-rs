@@ -4,11 +4,11 @@ version = "0.3.0"
 authors = ["Fred Briden <fred.briden@gmail.com>"]
 license = "MIT"
 description = "A collection of utilities for the financial markets."
-keywords = [ "finance", "stocks" ]
+keywords = ["finance", "stocks"]
 readme = "README.md"
 edition = "2018"
 
-include = [ "Cargo.toml", "LICENSE", "README.md", "src/**/*.rs" ]
+include = ["Cargo.toml", "LICENSE", "README.md", "src/**/*.rs"]
 
 repository = "https://github.com/fbriden/market-finance-rs"
 homepage = "https://github.com/fbriden/market-finance-rs"
@@ -16,13 +16,11 @@ homepage = "https://github.com/fbriden/market-finance-rs"
 [features]
 
 # By default only allow formatting to keep the dependency list as small as possible
-default = [ "formatting" ]
+default = ["formatting"]
 
 # Allows for better formatting of structures - typically around date / times
-formatting = [ "chrono" ]
-
-# Technical indicators - currently in beta and disabled by default
-indicators = []
+formatting = ["chrono"]
 
 [dependencies]
 chrono = { version = "0.4", optional = true }
+polars = "0.22.8"
